@@ -78,10 +78,20 @@ public class ArrayStack<E> implements Stack<E> {
 
     public static void main(String...args){
 
-     //   System.out.println(filterString(""));
+       System.out.println(increaseNumberRoundness(902200100));
 
-        Queue<Integer> queue = new ArrayDeque<>();
-
-
+        //Queue<Integer> queue = new ArrayDeque<>();
     }
+
+   static boolean increaseNumberRoundness(int n) {
+       String temp = Integer.toString(n);
+       int i =temp.length() -1;
+       int indexOfO = temp.lastIndexOf('0');
+       if (indexOfO == -1)
+           return false;
+       while(temp.charAt(i) == '0')
+           i++;
+
+       return false;
+   }
 }
