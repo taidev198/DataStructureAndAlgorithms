@@ -12,6 +12,8 @@ public class Generics {
     class A{}
     class B extends A{}
     class C extends B{}
+     interface D{}
+     interface E {}
 
     public static void main(String...args){
 
