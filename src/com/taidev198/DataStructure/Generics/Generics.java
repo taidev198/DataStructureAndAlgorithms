@@ -12,6 +12,7 @@ public class Generics {
     class A{}
     class B extends A{}
     class C extends B{}
+    class X extends A{}
      interface D{}
      interface E {}
 
