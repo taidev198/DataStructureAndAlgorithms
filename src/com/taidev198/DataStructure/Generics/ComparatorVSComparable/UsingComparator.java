@@ -1,9 +1,6 @@
 package com.taidev198.DataStructure.Generics.ComparatorVSComparable;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
-import java.util.List;
+import java.util.Comparator;
 
 /**
  * @author traig on 7/15/2018.
@@ -11,29 +8,29 @@ import java.util.List;
  */
 public class UsingComparator {
 
-    static class Duck implements Comparable<Duck> {
+    class Duck implements Comparator<Duck>{
+
         private String name;
+        private int weight;
 
-        public Duck(String name){ this.name = name; }
-        @Override
-        public String toString() {
-            return name;
+        public Duck(String name, int weight){
+
+            this.name = name;
+            this.weight = weight;
         }
 
+
         @Override
-        public int compareTo(Duck o) {
-            return name.compareTo(o.name);
+        public int compare(Duck o1, Duck o2) {
+            return 0;
         }
+
+
     }
-
 
     public static void main(String...args){
 
-        List<Duck> list = new ArrayList<>();
-        list.add(new Duck("Quack"));
-        list.add(new Duck("Puddles"));
-
-        Collections.sort(list);
+    Comparator<Duck> d1 = (d11, d2) -> d11.weight - d11.weight;
 
     }
 }
